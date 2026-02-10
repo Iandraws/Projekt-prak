@@ -1,39 +1,33 @@
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import "./App.css";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
 
 function App() {
   return (
-    <>
+    <BrowserRouter>
       <header className="header">
         <h1>Meine Website</h1>
-        <p className="tagline">Willkommen auf meiner Seite!</p>
+        <p className="tagline">Mit React Router! 🚀</p>
       </header>
 
       <nav className="navbar">
-        <a href="#home">Home</a>
-        <a href="#about">Über mich</a>
-        <a href="#contact">Kontakt</a>
+        <Link to="/">Home</Link>
+        <Link to="/about">Über mich</Link>
+        <Link to="/contact">Kontakt</Link>
       </nav>
 
-      <section className="hero">
-        <h2>Hallo! 👋</h2>
-        <p>Ich lerne gerade React und HTML/CSS</p>
-      </section>
-
-      <section className="about">
-        <h2>Über mich</h2>
-        <p>Das ist ein Test-Website um HTML und CSS zu lernen.</p>
-        <p>Hier kann ich später mehr über mich schreiben!</p>
-      </section>
-
-      <section className="contact">
-        <h2>Kontakt</h2>
-        <button className="btn">Email schreiben</button>
-      </section>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
 
       <footer className="footer">
-        <p>&copy; 2026 Meine Website. Alle Rechte vorbehalten.</p>
+        <p>&copy; 2026 Meine Website. Mit React Router 🎉</p>
       </footer>
-    </>
+    </BrowserRouter>
   );
 }
 

@@ -38,7 +38,8 @@ body {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.navbar a {
+.navbar a,
+.navbar {
   color: white;
   text-decoration: none;
   margin: 0 20px;
@@ -46,8 +47,9 @@ body {
   transition: color 0.3s;
 }
 
-.navbar a:hover {
-  color: #667eea;
+.navbar a:hover,
+.navbar :hover {
+  color: #28a745;
 }
 
 /* SECTIONS */
